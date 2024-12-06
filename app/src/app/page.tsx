@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@mui/material";
-import { CardCarousel } from "./components/Content";
+import { CardVault } from "./components/Content";
 import Footer from "./components/Footer";
 import { Head } from "./components/Head";
 import "./globals.css";
@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Head />
       <ThemeProvider theme={theme}>
-        <CardCarousel />
+        <CardVault />
       </ThemeProvider>
       <Footer />
     </>
