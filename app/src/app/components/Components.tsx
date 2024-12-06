@@ -11,14 +11,14 @@ export const CarouselControls = ({
 }) => (
   <>
     <button
-      className="absolute left-0 z-10 p-2 rounded-full bg-white shadow-lg hover:scale-110 transition-transform"
+      className="absolute left-[-20px] z-10 p-2 rounded-full bg-white shadow-lg hover:scale-110 transition-transform"
       aria-label="Previous card"
       onClick={onPrevious}
     >
       <ChevronLeft className="w-8 h-8" />
     </button>
     <button
-      className="absolute right-0 z-10 p-2 rounded-full bg-white shadow-lg hover:scale-110 transition-transform"
+      className="absolute right-[-20px] z-10 p-2 rounded-full bg-white shadow-lg hover:scale-110 transition-transform"
       aria-label="Next card"
       onClick={onNext}
     >
