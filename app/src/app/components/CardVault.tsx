@@ -38,10 +38,16 @@ export const CardVault = () => {
   };
 
   return (
-    <Box sx={{ minHeight: "100vh", py: 6, px: 2 }}>
+    <Box sx={{ minHeight: "calc(100vh - 50px)", py: 6, px: 2 }}>
       <Container
         maxWidth="lg"
-        sx={{ p: 4, bgcolor: "grey.900", borderRadius: 2, boxShadow: 3 }}
+        sx={{
+          p: 4,
+          bgcolor: "grey.900",
+          borderRadius: 2,
+          boxShadow: 3,
+          minHeight: "80vh", // Adjust the minimum height to allow more vertical space
+        }}
       >
         <Typography
           variant="h3"
@@ -55,7 +61,7 @@ export const CardVault = () => {
           Enjoy your trading card collection in style
         </Typography>
 
-        <Divider sx={{ mb: 6 }} />
+        <Divider sx={{ mb: 1 }} />
 
         <Box
           sx={{
@@ -63,7 +69,8 @@ export const CardVault = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            py: 4,
+            py: 3,
+            minHeight: "60vh",
           }}
         >
           <CarouselControls onPrevious={handlePrevious} onNext={handleNext} />
@@ -71,7 +78,6 @@ export const CardVault = () => {
             className="card-container"
             sx={{
               display: "flex",
-              overflowX: "auto",
               scrollSnapType: "x mandatory",
             }}
           >
@@ -88,33 +94,14 @@ export const CardVault = () => {
                   card={card}
                   isCenter={isCenter}
                   isFlipped={isFlipped}
-                  // @ts-expect-error potential type error
+                  // @ts-expect-error: nullable
                   onClick={isCenter ? () => toggleFlip(cardIndex) : undefined}
-                  className={`card ${isCenter ? "is-center" : ""}`}
-                  sx={{
-                    flex: "0 0 auto",
-                    scrollSnapAlign: "center",
-                    transform: isFlipped ? "rotateY(180deg)" : "none",
-                    transition: "transform 0.6s",
-                    transformStyle: "preserve-3d",
-                  }}
                 />
               );
             })}
           </Box>
         </Box>
       </Container>
-      <style>{`
-        .preserve-3d {
-          transform-style: preserve-3d;
-        }
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-      `}</style>
     </Box>
   );
 };

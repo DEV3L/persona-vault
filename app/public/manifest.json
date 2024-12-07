@@ -1,11 +1,11 @@
 {
-  "name": "Artifact L!ft Off",
-  "short_name": "Artifact",
-  "description": "A responsive site template to showcase projects and artifacts with ease.",
+  "name": "P£rsona Vault",
+  "short_name": "P£rsona",
+  "description": "A dynamic, gamified card carousel for showcasing professional personality profiles with stunning visuals and interactive storytelling.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "background_color": "#F6F6F6",
+  "theme_color": "#3A3D98",
   "icons": [
     {
       "src": "/icon-192x192.png",

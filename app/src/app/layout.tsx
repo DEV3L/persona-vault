@@ -8,30 +8,30 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "AiDo Task Organizer",
+  title: "P£rsona Vault",
   description:
-    "Streamline your daily task management with AiDo, a responsive and intuitive task organizer.",
-  metadataBase: new URL("https://aido-lift-off.vercel.app"),
+    "Unlock the stories within. A dynamic, gamified card carousel for showcasing professional personality profiles with stunning visuals and interactive storytelling.",
+  metadataBase: new URL("https://persona-vault.vercel.app"),
   openGraph: {
-    title: "AiDo Task Organizer",
+    title: "P£rsona Vault",
     description:
-      "Streamline your daily task management with AiDo, a responsive and intuitive task organizer.",
+      "Unlock the stories within. A dynamic, gamified card carousel for showcasing professional personality profiles with stunning visuals and interactive storytelling.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AiDo Task Organizer",
+        alt: "P£rsona Vault",
       },
     ],
-    siteName: "AiDo Task Organizer",
+    siteName: "P£rsona Vault",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AiDo Task Organizer",
+    title: "P£rsona Vault",
     description:
-      "Streamline your daily task management with AiDo, a responsive and intuitive task organizer.",
+      "Unlock the stories within. A dynamic, gamified card carousel for showcasing professional personality profiles with stunning visuals and interactive storytelling.",
     images: ["/og-image.png"],
   },
 };

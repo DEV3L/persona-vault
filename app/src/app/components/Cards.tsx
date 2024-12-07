@@ -1,5 +1,7 @@
 "use client";
 
+import { Box } from "@mui/material";
+
 import { motion, MotionProps } from "framer-motion";
 import { HTMLAttributes } from "react";
 import { CardType } from "./Card";
@@ -19,7 +21,7 @@ export const Card = ({
   isFlipped,
   onClick,
 }: CardProps & MotionProps & HTMLAttributes<HTMLDivElement>) => (
-  <div onClick={isCenter ? onClick : () => {}}>
+  <Box onClick={isCenter ? onClick : undefined}>
     <motion.div
       initial={{
         scale: isCenter ? 1 : 0.8,
@@ -41,5 +43,5 @@ export const Card = ({
         <CardBack card={card} />
       </motion.div>
     </motion.div>
-  </div>
+  </Box>
 );

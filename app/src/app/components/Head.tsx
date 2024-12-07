@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import { default as NextHead } from "next/head";
 import { useEffect } from "react";
 
-export const Head = ({ title = "Artifact L!ft Off" }) => {
+export const Head = ({ title = "P£rsona Vault" }) => {
   useEffect(() => {
     document.title = title;
   }, [title]);
@@ -18,21 +18,21 @@ export const Head = ({ title = "Artifact L!ft Off" }) => {
 };
 
 export const metadata: Metadata = {
-  title: "AiDo Task Organizer",
+  title: "P£rsona Vault",
   description:
-    "Streamline your daily task management with AiDo, a responsive and intuitive task organizer.",
+    "Unlock the stories within. A dynamic, gamified card carousel for showcasing professional personality profiles with stunning visuals and interactive storytelling.",
   openGraph: {
-    title: "AiDo Task Organizer",
+    title: "P£rsona Vault",
     description:
-      "Streamline your daily task management with AiDo, a responsive and intuitive task organizer.",
-    url: "https://aido-task-organizer.vercel.app",
-    siteName: "AiDo Task Organizer",
+      "Unlock the stories within. A dynamic, gamified card carousel for showcasing professional personality profiles with stunning visuals and interactive storytelling.",
+    url: "https://persona-vault.vercel.app",
+    siteName: "P£rsona Vault",
     images: [
       {
         url: "/og-image.png", // Ensure this image is added to your public folder
         width: 1200,
         height: 630,
-        alt: "AiDo Task Organizer",
+        alt: "P£rsona Vault",
       },
     ],
     locale: "en_US",
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AiDo Task Organizer",
+    title: "P£rsona Vault",
     description:
-      "Streamline your daily task management with AiDo, a responsive and intuitive task organizer.",
+      "Unlock the stories within. A dynamic, gamified card carousel for showcasing professional personality profiles with stunning visuals and interactive storytelling.",
     images: ["/og-image.png"],
   },
 };

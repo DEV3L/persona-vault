@@ -60,6 +60,16 @@ body {
 
 /* Card Vault */
 
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
 .card-container {
   display: flex;
   overflow: hidden; /* Hide overflow to ensure only visible cards are shown */

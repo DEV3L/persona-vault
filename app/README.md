@@ -1,97 +1,80 @@
-# AiDo Task Organizer
+# P£rsona Vault
 
-Welcome to the AiDo Task Organizer repository. AiDo is a responsive, futuristic task organizer designed to streamline daily task management through a clean and intuitive interface. Built with **React** and **Framer Motion**, AiDo combines minimalist design with subtle animations to create an engaging and efficient task management experience.
+Welcome to the P£rsona Vault repository. This project is designed to provide a dynamic, gamified card carousel for showcasing professional personality profiles with stunning visuals and interactive storytelling. Perfect for resumes, branding, and self-expression, P£rsona Vault turns profiles into an immersive digital experience.
 
 ## Table of Contents
 
-- [AiDo Task Organizer](#aido-task-organizer)
+- [P£rsona Vault](#prsona-vault)
   - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
-  - [Functional Requirements](#functional-requirements)
-  - [Design Requirements](#design-requirements)
-  - [Responsive Behavior](#responsive-behavior)
-  - [Accessibility Requirements](#accessibility-requirements)
-  - [Scope Note](#scope-note)
-  - [Getting Started](#getting-started)
+  - [Product Overview](#product-overview)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Customization](#customization)
   - [Deployment](#deployment)
   - [Contributing](#contributing)
   - [License](#license)
 
-## Overview
+## Product Overview
 
-AiDo is designed to provide a seamless task management experience with a futuristic theme. The app begins with two preset tasks to introduce the interface and inspire creativity.
+P£rsona Vault is a dynamic, gamified card carousel designed to showcase professional personality profiles with stunning visuals and interactive storytelling. It reimagines how personalities are presented by merging professional storytelling with interactive, visually rich designs.
 
-## Functional Requirements
+## Features
 
-1. **Task Management Features**
+- **Carousel Display**: Three-card layout with smooth transitions and circular navigation.
+- **Card Structure**: High-resolution visuals with expandable cards for detailed backstories.
+- **Interaction Features**: Hover effects, lightbox view, and progress indicators for enhanced user engagement.
+- **Customization Options**: Themes, color palettes, and background effects for personalized storytelling.
 
-   - **Add Task**: Quickly add new tasks with smooth animations.
-   - **Remove Task**: Delete tasks with fade-out animations.
-   - **Reorder Tasks**: Intuitive drag-and-drop functionality.
-   - **Task Completion (Optional)**: Mark tasks as completed with visual feedback.
+## Installation
 
-2. **Preset Tasks**
+To set up the project locally using Hatch, follow these steps:
 
-   - Initial tasks include "Contact Artifact L!ft Off" and a random space-themed task.
+1. **Clone the repository**:
 
-3. **Page Layout**
+   ```bash
+   git clone https://github.com/dev3l/persona-vault.git
+   cd persona-vault
+   ```
 
-   - **Header**: Prominent title and tagline.
-   - **Task List**: Centered, uncluttered design.
-   - **Footer**: Optional inspirational message or links.
+2. **Create and activate a virtual environment**:
+   Use Hatch to create and activate a virtual environment:
 
-4. **Animations**
-   - Smooth transitions and subtle hover effects.
+   ```bash
+   hatch env create
+   hatch shell
+   ```
 
-## Design Requirements
+3. **Navigate to the contents directory**:
 
-1. **Task Card Layout**
+   ```bash
+   cd contents
+   ```
 
-   - Flexible height, rounded corners, and subtle box shadow.
+## Usage
 
-2. **Interactive Design**
-
-   - Hover effects and drag-and-drop visual feedback.
-
-3. **Task States**
-   - Distinct styles for active, hover, and dragging states.
-
-## Responsive Behavior
-
-1. **Layout**
-
-   - Proportional scaling and touch-friendly design.
-
-2. **Interactions**
-   - Seamless drag-and-drop with touch gestures.
-
-## Accessibility Requirements
-
-1. **Visual**
-
-   - High-contrast text and clear hierarchy.
-
-2. **Interactive Feedback**
-   - Visual and animated feedback for interactions.
-
-## Scope Note
-
-- Focused on core task management: adding, removing, and reordering tasks.
-- Advanced features can be introduced in future iterations.
-
-## Getting Started
-
-To run the development server:
+To preview the site locally, use the following command:
 
 ```bash
-yarn dev
+mkdocs serve
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Access the site at `http://127.0.0.1:8000`.
+
+## Customization
+
+- **Theme Configuration**: Modify `mkdocs.yml` to change the theme settings, including colors and fonts. The theme is designed to be sleek and modern, with a focus on readability and aesthetics.
+- **CSS Styling**: Add custom styles in `stylesheets/extra.css` to enhance the site's appearance, including the carousel and card interactions.
 
 ## Deployment
 
-The application is automatically deployed to Vercel with each push to the main branch.
+To deploy the site to GitHub Pages, run:
+
+```bash
+mkdocs gh-deploy
+```
+
+Ensure your repository is linked to a GitHub account and has GitHub Pages enabled.
 
 ## Contributing
 

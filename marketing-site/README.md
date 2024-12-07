@@ -1,83 +1,55 @@
-# Artifact L!ft Off
+# P£rsona Vault
 
-Welcome to the Artifact L!ft Off repository. This project is designed to provide a simple, responsive site template to showcase projects and artifacts with ease. Build stunning sites quickly and effectively.
+Welcome to the P£rsona Vault repository. P£rsona Vault is a dynamic, gamified card carousel designed to showcase professional personality profiles with stunning visuals and interactive storytelling. Perfect for resumes, branding, and self-expression, P£rsona Vault turns profiles into an immersive digital experience.
 
 ## Table of Contents
 
-- [Artifact L!ft Off](#artifact-lft-off)
+- [P£rsona Vault](#prsona-vault)
   - [Table of Contents](#table-of-contents)
-  - [Project Overview](#project-overview)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Customization](#customization)
+  - [Product Overview](#product-overview)
+  - [Key Features](#key-features)
+  - [Responsive Behavior](#responsive-behavior)
+  - [Accessibility](#accessibility)
+  - [Getting Started](#getting-started)
   - [Deployment](#deployment)
   - [Contributing](#contributing)
   - [License](#license)
 
-## Project Overview
+## Product Overview
 
-Artifact L!ft Off is a responsive site template designed to showcase projects and artifacts with ease. Whether you're launching a product, creating a personal portfolio, or showcasing a collection, Artifact L!ft Off empowers you to get started fast.
+P£rsona Vault reimagines how personalities are presented by merging professional storytelling with interactive, visually rich designs. It is ideal for professional showcases, gamified resumes, and creative portfolios.
 
-## Features
+## Key Features
 
-- **Interactive Design**: Create visually engaging sites that highlight your content.
-- **Quick Setup**: Get started with minimal effort using pre-built templates.
-- **Customizable Layouts**: Tailor your site to your project’s needs.
-- **Responsive Design**: Ensure your site looks great on any device.
-- **Hero Banner**: Feature a prominent hero banner to capture attention with stunning visuals.
-- **Carousel**: Showcase multiple images or content pieces in a dynamic carousel format.
-- **Contact Form Integration**: Easily connect with your audience using a Formspree-powered contact form.
+- **Carousel Display**: Three-card layout with smooth transitions and circular navigation.
+- **Card Structure**: High-resolution visuals with expandable cards for detailed backstories.
+- **Interaction Features**: Hover effects, lightbox view, and progress indicators for enhanced user engagement.
+- **Customization Options**: Themes, color palettes, and background effects for personalized storytelling.
 
-## Installation
+## Responsive Behavior
 
-To set up the project locally using Hatch, follow these steps:
+- **Mobile**: Vertical stack with swipe gestures.
+- **Desktop**: Three-card carousel layout with intuitive navigation.
 
-1. **Clone the repository**:
+## Accessibility
 
-   ```bash
-   git clone https://github.com/dev3l/artifact-lift-off.git
-   cd artifact-lift-off
-   ```
+- **High Contrast**: Text and buttons ensure readability against vivid backgrounds.
+- **Keyboard Navigation**: Fully operable with keyboard controls.
+- **ARIA Labels**: Cards, buttons, and interactive elements are accessible to screen readers.
 
-2. **Create and activate a virtual environment**:
-   Use Hatch to create and activate a virtual environment:
+## Getting Started
 
-   ```bash
-   hatch env create
-   hatch shell
-   ```
-
-3. **Navigate to the contents directory**:
-
-   ```bash
-   cd contents
-   ```
-
-## Usage
-
-To preview the site locally, use the following command:
+To run the development server:
 
 ```bash
-mkdocs serve
+yarn dev
 ```
 
-Access the site at `http://127.0.0.1:8000`.
-
-## Customization
-
-- **Theme Configuration**: Modify `mkdocs.yml` to change the theme settings, including colors and fonts. The theme is designed to be sleek and modern, with a focus on readability and aesthetics.
-- **CSS Styling**: Add custom styles in `stylesheets/extra.css` to enhance the site's appearance, including the hero banner and carousel.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Deployment
 
-To deploy the site to GitHub Pages, run:
-
-```bash
-mkdocs gh-deploy
-```
-
-Ensure your repository is linked to a GitHub account and has GitHub Pages enabled.
+The application is automatically deployed to Vercel with each push to the main branch.
 
 ## Contributing
 
