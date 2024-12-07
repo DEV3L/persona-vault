@@ -85,7 +85,7 @@ export const CardFront = ({ card }: { card: CardType }) => {
           <Typography
             variant="body2"
             fontWeight="bold"
-            sx={{ fontSize: "0.75rem", paddingTop: "12px" }}
+            sx={{ fontSize: "0.7rem", paddingTop: "12px" }}
           >
             {description}
           </Typography>

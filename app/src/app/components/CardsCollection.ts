@@ -112,7 +112,91 @@ const finalFantasyCards: CardType[] = [
   },
 ];
 
+const fishCards: CardType[] = [
+  {
+    id: 8,
+    title: "Sarah Sanderson",
+    description:
+      "A whimsical witch who enchants with her hauntingly beautiful voice.",
+    effectDescription: "Uses a mesmerizing song to lower enemy defenses.",
+    stats: { attack: 60, defense: 50, speed: 75 },
+    frontImage: "/cards/sarah-sanderson-card-front.png",
+    backImage: "/cards/sarah-sanderson-card-back.png",
+    backgroundColor: "#800080",
+    textColor: "#FFFFFF",
+    rarity: "rare",
+    setNumber: "HP-002",
+    type: "Support",
+  },
+  {
+    id: 9,
+    title: "Rose Dawson",
+    description:
+      "A courageous and compassionate survivor who inspires those around her.",
+    effectDescription:
+      "Grants allies a boost to resilience when health is low.",
+    stats: { attack: 40, defense: 60, speed: 65 },
+    frontImage: "/cards/rose-dawson-card-front.png",
+    backImage: "/cards/rose-dawson-card-back.png",
+    backgroundColor: "#4682B4",
+    textColor: "#FFFFFF",
+    rarity: "uncommon",
+    setNumber: "TT-001",
+    type: "Support",
+  },
+];
+
+const kaidenCards: CardType[] = [
+  {
+    id: 10,
+    title: "Michael Myers",
+    description: "A relentless and unyielding force of terror.",
+    effectDescription:
+      "Immune to status effects and deals increased damage to vulnerable enemies.",
+    stats: { attack: 90, defense: 85, speed: 60 },
+    frontImage: "/cards/michael-myers-card-front.png",
+    backImage: "/cards/michael-myers-card-back.png",
+    backgroundColor: "#1C1C1C",
+    textColor: "#FF0000",
+    rarity: "legendary",
+    setNumber: "HK-001",
+    type: "Slasher",
+  },
+  {
+    id: 11,
+    title: "Corey Taylor",
+    description: "The masked master of chaos and unbridled energy.",
+    effectDescription:
+      "Boosts allies' attack power with an ear-splitting battle cry.",
+    stats: { attack: 75, defense: 70, speed: 85 },
+    frontImage: "/cards/corey-taylor-card-front.png",
+    backImage: "/cards/corey-taylor-card-back.png",
+    backgroundColor: "#800000",
+    textColor: "#FFFFFF",
+    rarity: "rare",
+    setNumber: "SK-001",
+    type: "Performer",
+  },
+  {
+    id: 12,
+    title: "Spider-Ham",
+    description:
+      "A twisted parody of the web-slinging hero, with a dark and graphic edge.",
+    effectDescription: "Confuses enemies with chaotic attacks and dark humor.",
+    stats: { attack: 80, defense: 60, speed: 90 },
+    frontImage: "/cards/spider-ham-card-front.png",
+    backImage: "/cards/spider-ham-card-back.png",
+    backgroundColor: "#FF4500",
+    textColor: "#000000",
+    rarity: "rare",
+    setNumber: "SM-002",
+    type: "Parody Hero",
+  },
+];
+
 export const CardData: CardType[] = [
   ...monsterVerseCards,
+  ...fishCards,
+  ...kaidenCards,
   ...finalFantasyCards,
 ];
