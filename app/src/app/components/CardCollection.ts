@@ -11,7 +11,7 @@ export const CardData: CardType[] = [
     rarity: "legendary",
   },
   {
-    id: 1,
+    id: 2,
     title: "Red Dragon",
     description: "A legendary dragon",
     stats: { attack: 75, defense: 65, speed: 95 },
@@ -20,7 +20,7 @@ export const CardData: CardType[] = [
     rarity: "legendary",
   },
   {
-    id: 2,
+    id: 3,
     title: "Green Dragon",
     description: "A legendary dragon",
     stats: { attack: 75, defense: 65, speed: 95 },
@@ -29,7 +29,7 @@ export const CardData: CardType[] = [
     rarity: "common",
   },
   {
-    id: 3,
+    id: 4,
     title: "Yellow Dragon",
     description: "A legendary dragon",
     stats: { attack: 75, defense: 65, speed: 95 },
@@ -38,7 +38,7 @@ export const CardData: CardType[] = [
     rarity: "rare",
   },
   {
-    id: 4,
+    id: 5,
     title: "Purple Dragon",
     description: "A legendary dragon",
     stats: { attack: 75, defense: 65, speed: 95 },

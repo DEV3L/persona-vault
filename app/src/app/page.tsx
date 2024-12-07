@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@mui/material";
-import { CardVault } from "./components/Content";
+import { CardVault } from "./components/CardVault";
 import Footer from "./components/Footer";
 import { Head } from "./components/Head";
 import "./globals.css";

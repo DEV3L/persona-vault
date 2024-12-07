@@ -3,17 +3,16 @@
 import { useState } from "react";
 import { CardData } from "./CardCollection";
 import { Card } from "./Cards";
-import { CarouselControls } from "./Components";
+import { CarouselControls } from "./CarouselControls";
+import { getVisibleIndices } from "./carouselUtils";
+
+const cardData = { ...CardData };
 
 export const CardVault = () => {
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const visibleIndices = [
-    (currentIndex - 1 + CardData.length) % CardData.length,
-    currentIndex,
-    (currentIndex + 1) % CardData.length,
-  ];
+  const visibleIndices = getVisibleIndices(currentIndex, CardData.length);
 
   const toggleFlip = (index: number) => {
     setFlippedCards((prevFlippedCards) => {
@@ -37,6 +36,13 @@ export const CardVault = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % CardData.length);
   };
 
+  console.log(visibleIndices);
+  const y = visibleIndices.map((cardIndex, displayIndex) => {
+    return { cardIndex, displayIndex };
+  });
+
+  console.log(y);
+
   return (
     <div className="min-h-screen py-12 px-4">
       <div
@@ -54,10 +60,13 @@ export const CardVault = () => {
 
         <div className="relative flex items-center justify-center py-8">
           <CarouselControls onPrevious={handlePrevious} onNext={handleNext} />
-          <div className="flex items-center justify-center gap-4">
+          <div className="card-container">
             {visibleIndices.map((cardIndex, displayIndex) => {
-              const card = CardData[cardIndex];
+              const card = cardData[cardIndex];
               if (!card) return null;
+
+              console.log("CARD", card);
+
               const isCenter = displayIndex === 1; // Ensure the current card is always in the center
               const isFlipped = flippedCards.has(cardIndex);
 
@@ -68,6 +77,7 @@ export const CardVault = () => {
                   isCenter={isCenter}
                   isFlipped={isFlipped}
                   onClick={isCenter ? () => toggleFlip(cardIndex) : undefined} // Only allow clicking the center card
+                  className={`card ${isCenter ? "is-center" : ""}`}
                 />
               );
             })}
