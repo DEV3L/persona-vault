@@ -9,7 +9,6 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        position: "sticky", // Make the footer sticky
         bottom: 0, // Stick to the bottom
         zIndex: 1000, // Ensure it appears on top
         textAlign: "center",

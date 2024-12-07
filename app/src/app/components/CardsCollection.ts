@@ -1,3 +1,5 @@
+import { CardType } from "./Card";
+
 export const CardData: CardType[] = [
   {
     id: 1,
@@ -5,10 +7,9 @@ export const CardData: CardType[] = [
     description: "A legendary swordsman, embodying pure power and darkness.",
     effectDescription: "Unleashes a devastating attack on all opponents.",
     stats: { attack: 95, defense: 85, speed: 90 },
-    frontImage: "/sephiroth-card-front.png",
-    backImage: "/sephiroth-card-back.png",
+    frontImage: "/cards/sephiroth-card-front.png",
+    backImage: "/cards/sephiroth-card-back.png",
     backgroundColor: "#2F4F4F",
-    backgroundColorImage: "/sephiroth-bg.png", // Placeholder for the new property
     textColor: "#FFFFFF", // Placeholder for the new property
     rarity: "legendary",
     setNumber: "FF7-001",
@@ -23,7 +24,6 @@ export const CardData: CardType[] = [
     frontImage: "/huffie-card.png",
     backImage: "/huffie-card-back.png",
     backgroundColor: "#008080",
-    backgroundColorImage: "/huffie-bg.png", // Placeholder for the new property
     textColor: "#FFFFFF", // Placeholder for the new property
     rarity: "rare",
     setNumber: "ANM-002",
@@ -39,7 +39,6 @@ export const CardData: CardType[] = [
     frontImage: "/cloud-card.png",
     backImage: "/cloud-card-back.png",
     backgroundColor: "#4682B4",
-    backgroundColorImage: "/cloud-bg.png", // Placeholder for the new property
     textColor: "#FFFFFF", // Placeholder for the new property
     rarity: "legendary",
     setNumber: "FF7-002",
@@ -51,10 +50,9 @@ export const CardData: CardType[] = [
     description: "A rare sharpshooter shrouded in mystery and redemption.",
     effectDescription: "Can transform into a powerful beast.",
     stats: { attack: 75, defense: 60, speed: 75 },
-    frontImage: "/vincent-card.png",
-    backImage: "/vincent-card-back.png",
+    frontImage: "/cards/vincent-card-front.png",
+    backImage: "/cards/vincent-card-back.png",
     backgroundColor: "#800000",
-    backgroundColorImage: "/vincent-bg.png", // Placeholder for the new property
     textColor: "#FFFFFF", // Placeholder for the new property
     rarity: "rare",
     setNumber: "FF7-003",
@@ -70,7 +68,6 @@ export const CardData: CardType[] = [
     frontImage: "/barret-card.png",
     backImage: "/barret-card-back.png",
     backgroundColor: "#654321",
-    backgroundColorImage: "/barret-bg.png", // Placeholder for the new property
     textColor: "#FFFFFF", // Placeholder for the new property
     rarity: "uncommon",
     setNumber: "FF7-004",

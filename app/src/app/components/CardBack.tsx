@@ -11,11 +11,8 @@ export const CardBack = ({ card }: { card: CardType }) => {
       sx={{
         ...rarityStyles,
         backgroundColor: card.backgroundColor,
-        backgroundImage: `url(${card.backgroundColorImage})`, // Use background color image
         color: card.textColor, // Use text color
-        background: `url(${
-          card.backImage || "/sephiroth-card-back.png"
-        }) no-repeat center center`,
+        background: `url(${card.backImage || ""}) no-repeat center center`,
         backgroundSize: "cover",
         display: "flex",
         flexDirection: "column",
@@ -40,8 +37,11 @@ export const CardBack = ({ card }: { card: CardType }) => {
           zIndex: 10,
         }}
       >
-        <Box sx={{ p: 2, textAlign: "center", color: card.textColor }}>
-          <Typography variant="subtitle1" sx={{ fontSize: ".75rem" }}>
+        <Box sx={{ p: 2, textAlign: "center" }}>
+          <Typography
+            variant="subtitle1"
+            sx={{ color: "white", fontSize: ".75rem" }}
+          >
             {card.effectDescription}
           </Typography>
           <Divider

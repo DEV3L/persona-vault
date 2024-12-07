@@ -3,7 +3,6 @@
 export interface CardType {
   id: number;
   backgroundColor: string;
-  backgroundColorImage: string; // New property for background color image
   backImage: string;
   description: string;
   effectDescription: string;
