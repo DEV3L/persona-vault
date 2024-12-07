@@ -1,8 +1,9 @@
 "use client";
 
+import { Box, Container, Divider, Typography } from "@mui/material";
 import { useState } from "react";
-import { CardData } from "./CardsCollection";
 import { Card } from "./Cards";
+import { CardData } from "./CardsCollection";
 import { CarouselControls } from "./CarouselControls";
 import { getVisibleIndices } from "./carouselUtils";
 
@@ -36,36 +37,47 @@ export const CardVault = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % CardData.length);
   };
 
-  console.log(visibleIndices);
-  const y = visibleIndices.map((cardIndex, displayIndex) => {
-    return { cardIndex, displayIndex };
-  });
-
-  console.log(y);
-
   return (
-    <div className="min-h-screen py-12 px-4">
-      <div
-        className="max-w-4xl mx-auto p-8 bg-gray-800 rounded-lg shadow-lg"
-        style={{ backgroundColor: "#2d3748" }}
+    <Box sx={{ minHeight: "100vh", py: 6, px: 2 }}>
+      <Container
+        maxWidth="lg"
+        sx={{ p: 4, bgcolor: "grey.900", borderRadius: 2, boxShadow: 3 }}
       >
-        <h1 className="text-4xl font-bold text-center mb-4 italic">
+        <Typography
+          variant="h3"
+          align="center"
+          gutterBottom
+          sx={{ fontStyle: "italic" }}
+        >
           P£rsona Vault
-        </h1>
-        <p className="text-gray-600 text-2xl text-center mb-12 monospace">
+        </Typography>
+        <Typography variant="h5" align="center" color="textSecondary" paragraph>
           Enjoy your trading card collection in style
-        </p>
+        </Typography>
 
-        <hr className="mb-12" />
+        <Divider sx={{ mb: 6 }} />
 
-        <div className="relative flex items-center justify-center py-8">
+        <Box
+          sx={{
+            position: "relative",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            py: 4,
+          }}
+        >
           <CarouselControls onPrevious={handlePrevious} onNext={handleNext} />
-          <div className="card-container">
+          <Box
+            className="card-container"
+            sx={{
+              display: "flex",
+              overflowX: "auto",
+              scrollSnapType: "x mandatory",
+            }}
+          >
             {visibleIndices.map((cardIndex, displayIndex) => {
               const card = cardData[cardIndex];
               if (!card) return null;
-
-              console.log("CARD", card);
 
               const isCenter = displayIndex === 1; // Ensure the current card is always in the center
               const isFlipped = flippedCards.has(cardIndex);
@@ -76,16 +88,22 @@ export const CardVault = () => {
                   card={card}
                   isCenter={isCenter}
                   isFlipped={isFlipped}
-                  // @ts-expect-error: something something typescript
+                  // @ts-expect-error potential type error
                   onClick={isCenter ? () => toggleFlip(cardIndex) : undefined}
                   className={`card ${isCenter ? "is-center" : ""}`}
+                  sx={{
+                    flex: "0 0 auto",
+                    scrollSnapAlign: "center",
+                    transform: isFlipped ? "rotateY(180deg)" : "none",
+                    transition: "transform 0.6s",
+                    transformStyle: "preserve-3d",
+                  }}
                 />
               );
             })}
-          </div>
-        </div>
-      </div>
-
+          </Box>
+        </Box>
+      </Container>
       <style>{`
         .preserve-3d {
           transform-style: preserve-3d;
@@ -97,6 +115,6 @@ export const CardVault = () => {
           transform: rotateY(180deg);
         }
       `}</style>
-    </div>
+    </Box>
   );
 };

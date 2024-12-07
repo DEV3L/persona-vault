@@ -21,8 +21,7 @@ export const CardFront = ({ card }: { card: CardType }) => {
         display: "flex",
         flexDirection: "column",
         backgroundColor: card.backgroundColor,
-        backgroundImage: `url(${card.backgroundColorImage})`, // Use background color image
-        color: card.textColor, // Use text color
+        color: card.textColor,
         ...rarityStyles,
         boxSizing: "border-box",
         position: "relative",
