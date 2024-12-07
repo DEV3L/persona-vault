@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, Box, Typography } from "@mui/material";
+import { Avatar, Box, Divider, Typography } from "@mui/material";
 import { CardType, getRarityStyles } from "./Card";
 
 export const CardFront = ({ card }: { card: CardType }) => {
@@ -51,8 +51,7 @@ export const CardFront = ({ card }: { card: CardType }) => {
         alt={card.title}
         sx={{
           width: "100%",
-          height: "70%",
-          objectFit: "cover",
+          objectFit: "contain", // Ensure the entire image fits within the box
           borderTopLeftRadius: "0.5rem",
           borderTopRightRadius: "0.5rem",
         }}
@@ -63,6 +62,7 @@ export const CardFront = ({ card }: { card: CardType }) => {
           component="h3"
           align="center"
           fontWeight="bold"
+          sx={{ padding: "6px 0 2px 0" }}
         >
           {card.title}
         </Typography>
@@ -71,17 +71,21 @@ export const CardFront = ({ card }: { card: CardType }) => {
           <Typography
             variant="subtitle2"
             align="center"
-            sx={{ fontSize: "1rem" }}
+            sx={{ fontSize: "1rem", padding: "2px 0" }}
           >
             {type}
           </Typography>
         )}
 
+        <Divider
+          sx={{ borderColor: card.textColor, margin: "4px", opacity: 0.2 }}
+        />
+
         {description && (
           <Typography
             variant="body2"
             fontWeight="bold"
-            sx={{ fontSize: "0.75rem", margin: "4px 0" }}
+            sx={{ fontSize: "0.75rem", paddingTop: "12px" }}
           >
             {description}
           </Typography>
