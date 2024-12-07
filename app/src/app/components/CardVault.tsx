@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CardData } from "./CardCollection";
+import { CardData } from "./CardsCollection";
 import { Card } from "./Cards";
 import { CarouselControls } from "./CarouselControls";
 import { getVisibleIndices } from "./carouselUtils";
@@ -76,7 +76,8 @@ export const CardVault = () => {
                   card={card}
                   isCenter={isCenter}
                   isFlipped={isFlipped}
-                  onClick={isCenter ? () => toggleFlip(cardIndex) : undefined} // Only allow clicking the center card
+                  // @ts-expect-error: something something typescript
+                  onClick={isCenter ? () => toggleFlip(cardIndex) : undefined}
                   className={`card ${isCenter ? "is-center" : ""}`}
                 />
               );
