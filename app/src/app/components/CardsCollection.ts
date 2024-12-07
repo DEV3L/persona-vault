@@ -194,7 +194,27 @@ const kaidenCards: CardType[] = [
   },
 ];
 
+const deadByDaylightCards: CardType[] = [
+  {
+    id: 13,
+    title: "The Doctor",
+    description:
+      "A sadistic tormentor from Léry’s Memorial Institute, skilled in breaking minds and spirits.",
+    effectDescription:
+      "Induces madness in Survivors, revealing their locations and impairing their actions.",
+    stats: { attack: 85, defense: 70, speed: 60 },
+    frontImage: "/cards/the-doctor-card-front.png",
+    backImage: "/cards/the-doctor-card-back.png",
+    backgroundColor: "#0D3B4A",
+    textColor: "#F50087",
+    rarity: "rare",
+    setNumber: "DBD-002",
+    type: "Killer",
+  },
+];
+
 export const CardData: CardType[] = [
+  ...deadByDaylightCards,
   ...monsterVerseCards,
   ...fishCards,
   ...kaidenCards,
