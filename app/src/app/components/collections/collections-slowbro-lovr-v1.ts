@@ -11,8 +11,8 @@ export const slowbroCards: CardType[] = [
     type: "Tank",
     subcategory: "Slasher",
     stats: { attack: 90, defense: 85, speed: 60, hp: 400 },
-    frontImage: "/cards/michael-myers-card-front.png",
-    backImage: "/cards/michael-myers-card-back.png",
+    frontImage: "/cards/slowbro/michael-myers-card-front.png",
+    backImage: "/cards/slowbro/michael-myers-card-back.png",
     backgroundColor: "#1C1C1C",
     textColor: "#FF0000",
     abilities: {
@@ -40,8 +40,8 @@ export const slowbroCards: CardType[] = [
     type: "Support",
     subcategory: "Performer",
     stats: { attack: 75, defense: 70, speed: 85, effectiveness: 60, hp: 300 },
-    frontImage: "/cards/corey-taylor-card-front.png",
-    backImage: "/cards/corey-taylor-card-back.png",
+    frontImage: "/cards/slowbro/corey-taylor-card-front.png",
+    backImage: "/cards/slowbro/corey-taylor-card-back.png",
     backgroundColor: "#800000",
     textColor: "#FFFFFF",
     abilities: {
@@ -70,8 +70,8 @@ export const slowbroCards: CardType[] = [
     type: "Hybrid",
     subcategory: "Parody Hero",
     stats: { attack: 150, defense: 100, speed: 100, hp: 300 },
-    frontImage: "/cards/spider-ham-card-front.png",
-    backImage: "/cards/spider-ham-card-back.png",
+    frontImage: "/cards/slowbro/spider-ham-card-front.png",
+    backImage: "/cards/slowbro/spider-ham-card-back.png",
     backgroundColor: "#FF4500",
     textColor: "#000000",
     abilities: {
@@ -100,8 +100,8 @@ export const slowbroCards: CardType[] = [
     type: "DPS",
     subcategory: "Killer",
     stats: { attack: 85, defense: 70, speed: 60, hp: 350 },
-    frontImage: "/cards/the-doctor-card-front.png",
-    backImage: "/cards/the-doctor-card-back.png",
+    frontImage: "/cards/slowbro/the-doctor-card-front.png",
+    backImage: "/cards/slowbro/the-doctor-card-back.png",
     backgroundColor: "#0D3B4A",
     textColor: "#F50087",
     abilities: {
