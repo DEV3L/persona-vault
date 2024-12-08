@@ -1,6 +1,7 @@
 "use client";
 import { Box, Divider, Typography } from "@mui/material";
-import { CardType, getRarityStyles } from "./Card";
+import { getRarityStyles } from "./collections/cardRarity";
+import { CardType } from "./collections/cardType";
 
 export const CardBack = ({ card }: { card: CardType }) => {
   const rarityStyles = getRarityStyles(card.rarity);

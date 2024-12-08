@@ -4,9 +4,9 @@ import { Box } from "@mui/material";
 
 import { motion, MotionProps } from "framer-motion";
 import { HTMLAttributes } from "react";
-import { CardType } from "./Card";
 import { CardBack } from "./CardBack";
 import { CardFront } from "./CardFont";
+import { CardType } from "./collections/cardType";
 
 export interface CardProps {
   card: CardType;

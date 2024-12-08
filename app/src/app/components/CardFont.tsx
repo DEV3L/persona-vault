@@ -1,13 +1,17 @@
 "use client";
 import { Avatar, Box, Divider, Typography } from "@mui/material";
-import { CardType, getRarityStyles } from "./Card";
+import { getRarityStyles } from "./collections/cardRarity";
+import { CardType } from "./collections/cardType";
 
 export const CardFront = ({ card }: { card: CardType }) => {
   const rarityStyles = getRarityStyles(card.rarity);
 
   // Determine which additional information to display
   const description = card.description || card.effectDescription;
-  const type = card.type || card.subcategory;
+  const type =
+    card.type && card.subcategory
+      ? `${card.type} - ${card.subcategory}`
+      : card.type || card.subcategory;
 
   return (
     <Box
@@ -20,7 +24,6 @@ export const CardFront = ({ card }: { card: CardType }) => {
         transition: "transform 0.3s",
         display: "flex",
         flexDirection: "column",
-        backgroundColor: card.backgroundColor,
         color: card.textColor,
         ...rarityStyles,
         boxSizing: "border-box",
@@ -62,7 +65,7 @@ export const CardFront = ({ card }: { card: CardType }) => {
           component="h3"
           align="center"
           fontWeight="bold"
-          sx={{ padding: "6px 0 2px 0" }}
+          sx={{ padding: "4px 0 0px 0" }}
         >
           {card.title}
         </Typography>

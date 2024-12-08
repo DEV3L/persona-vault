@@ -3,17 +3,15 @@
 import { Box, Container, Divider, Typography } from "@mui/material";
 import { useState } from "react";
 import { Card } from "./Cards";
-import { CardData } from "./CardsCollection";
 import { CarouselControls } from "./CarouselControls";
 import { getVisibleIndices } from "./carouselUtils";
-
-const cardData = { ...CardData };
+import { allCards } from "./collections/collection";
 
 export const CardVault = () => {
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-  const visibleIndices = getVisibleIndices(currentIndex, CardData.length);
+  const visibleIndices = getVisibleIndices(currentIndex, allCards.length);
 
   const toggleFlip = (index: number) => {
     setFlippedCards((prevFlippedCards) => {
@@ -29,12 +27,12 @@ export const CardVault = () => {
 
   const handlePrevious = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + CardData.length) % CardData.length
+      (prevIndex) => (prevIndex - 1 + allCards.length) % allCards.length
     );
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % CardData.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % allCards.length);
   };
 
   return (
@@ -82,7 +80,7 @@ export const CardVault = () => {
             }}
           >
             {visibleIndices.map((cardIndex, displayIndex) => {
-              const card = cardData[cardIndex];
+              const card = allCards[cardIndex];
               if (!card) return null;
 
               const isCenter = displayIndex === 1; // Ensure the current card is always in the center
